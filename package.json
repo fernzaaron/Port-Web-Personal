@@ -1,17 +1,23 @@
 {
   "name": "personal-portfolio-web",
   "version": "1.0.0",
-  "description": "��#\u0000 \u0000P\u0000o\u0000r\u0000t\u0000-\u0000W\u0000e\u0000b\u0000-\u0000P\u0000e\u0000r\u0000s\u0000o\u0000n\u0000a\u0000l\u0000\r\u0000 \u0000",
-  "main": "index.js",
+  "description": "Personal portfolio website built with Node.js and Express",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fernzaaron/Port-Web-Personal.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "portfolio",
+    "resume",
+    "express",
+    "nodejs"
+  ],
+  "author": "Aaron Fernandez",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/fernzaaron/Port-Web-Personal/issues"
