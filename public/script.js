@@ -96,11 +96,8 @@ function animateOnLoad() {
   });
 }
 
-if (document.readyState === 'complete' || document.readyState === 'interactive') {
-  window.setTimeout(animateOnLoad, 120);
-} else {
-  document.addEventListener('DOMContentLoaded', () => window.setTimeout(animateOnLoad, 120));
-}
+// Entrance animations disabled by user request (removed automatic animateOnLoad call)
+// If you want to re-enable them later, call `animateOnLoad()` on DOMContentLoaded.
 
 /* Chat widget behavior (client-side, mock assistant with navigation commands) */
 (function(){
@@ -234,3 +231,5 @@ if (document.readyState === 'complete' || document.readyState === 'interactive')
   // initial tick
   onScroll();
 })();
+
+/* Video debug helper removed */

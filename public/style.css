@@ -24,14 +24,13 @@ body::before{
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  /* stronger, more colorful moving gradient */
-  background: linear-gradient(120deg, rgba(0,194,255,0.14), rgba(124,255,178,0.12) 30%, rgba(0,120,180,0.12) 60%, rgba(10,20,40,0.18));
-  background-size: 400% 400%;
-  /* keep the moving gradient visible without blending quirks */
-  mix-blend-mode: normal;
-  opacity: 0.94;
+  /* darkening layer + subtle colorful moving gradient underneath */
+  background: linear-gradient(180deg, rgba(0,0,0,0.56), rgba(0,0,0,0.46)), linear-gradient(120deg, rgba(0,194,255,0.10), rgba(124,255,178,0.06) 30%, rgba(0,120,180,0.05) 60%, rgba(10,20,40,0.12));
+  background-size: 600% 600%, 600% 600%;
+  background-blend-mode: multiply, normal;
+  opacity: 0.98;
   transform: translateZ(0) translate(var(--mx,0px), var(--my,0px));
-  animation: bgMove 30s ease-in-out infinite;
+  animation: bgMove 20s ease-in-out infinite;
 }
 
 /* secondary slow overlay for depth */
@@ -41,12 +40,38 @@ body::after{
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  background: radial-gradient(800px 400px at 10% 10%, rgba(0,120,180,0.06), transparent 30%), radial-gradient(700px 350px at 90% 90%, rgba(124,255,178,0.05), transparent 30%);
+  /* subtle, darker halos for depth without adding brightness */
+  background: radial-gradient(800px 400px at 10% 10%, rgba(0,0,0,0.18), transparent 30%), radial-gradient(700px 350px at 90% 90%, rgba(0,0,0,0.12), transparent 30%);
   background-size: 300% 300%;
   mix-blend-mode: normal;
-  opacity: 0.6;
+  opacity: 0.62;
   transform: translateZ(0) translate(calc(var(--mx,0px)/2), calc(var(--my,0px)/2));
-  animation: bgMoveSlow 52s ease-in-out infinite;
+  animation: bgMoveSlow 36s ease-in-out infinite;
+}
+
+/* Background video: sits below the overlay gradients but behind content */
+.bg-video{
+  position:fixed;
+  right:0;
+  bottom:0;
+  min-width:100%;
+  min-height:100%;
+  width:auto;
+  height:auto;
+  z-index:-3; /* behind tint overlay (-2) and pseudo overlays (-1) */
+  object-fit:cover;
+  /* increase visibility: brighter and slightly less muted so teal motion shows through */
+  filter: brightness(0.60) contrast(0.94) saturate(0.88) sepia(0.02) hue-rotate(-10deg);
+  mix-blend-mode: multiply;
+  opacity: 1;
+  pointer-events:none;
+}
+
+/* iframe background removed (using <video> element instead) */
+
+/* Provide a small safe fallback for mobile: hide very large video on small screens */
+@media (max-width:600px){
+  .bg-video{ display:none }
 }
 
 @keyframes bgMove{
@@ -229,6 +254,12 @@ body::after{
 /* layer content above animations */
 .hero, .sub-hero{ position:relative; z-index:2 }
 
+/* overlay placed above the video to tint it toward the site's teal/mint palette */
+.bg-video-overlay{ position:fixed; inset:0; z-index:-2; pointer-events:none;
+  /* reduced tint strength so the video remains visible while keeping the mood */
+  background: linear-gradient(180deg, rgba(1,30,40,0.38), rgba(2,18,26,0.28));
+  mix-blend-mode: multiply; opacity:0.62; }
+
 /* Sidebar layout to resemble left-nav portfolio */
 .sidebar{ position:fixed; left:0; top:0; bottom:0; width:92px; display:flex; flex-direction:column; align-items:center; gap:1rem; padding:1.5rem 0; background:linear-gradient(180deg, rgba(6,10,18,0.2), rgba(6,10,18,0.08)); border-right:1px solid rgba(255,255,255,0.02); z-index:30 }
 .sidebar .brand{ font-weight:800; color:var(--text); text-decoration:none; font-size:1.05rem; display:block; margin-bottom:6px }
@@ -308,3 +339,5 @@ a:focus{ outline: 3px solid rgba(77,163,255,0.12); outline-offset:3px }
 
 /* fine-tune project card reveal look */
 .project-card.reveal-on-scroll{ transform-origin: center bottom }
+
+/* Styles for video debug panel (removed) */
