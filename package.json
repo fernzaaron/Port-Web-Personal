@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
-    "fetch-bg": "node scripts/download_bg.js"
+    "fetch-bg": "node scripts/download_bg.js",
+    "build": "node scripts/build_static.js"
   },
   "repository": {
     "type": "git",
