@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang=\"en\">
+<head>
+  <meta charset=\"UTF-8\" />
+  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
+  <title>Aaron Fernandez | Portfolio</title>
+  <link rel="stylesheet" href="/style.css?v=2">
+</head>
+<body>
+  <a id="top"></a>
+  <!-- Background video (replace src with any public mp4 URL you prefer) -->
+  <video id="bg-video" class="bg-video" autoplay muted loop playsinline preload="auto">
+    <source src="/bg.mp4" type="video/mp4">
+    <!-- fallback: the CSS gradients will remain if video can't load -->
+  </video>
+  <div class="bg-video-overlay" aria-hidden="true"></div>
+  <!-- Top navigation (transformed layout) -->
+  <header class="top-nav">
+    <div class="container nav-inner">
+      <a class="brand" href="/">AF</a>
+      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-label="Toggle menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <nav id="main-nav" class="links" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/projects">Projects</a>
+        <a class="icon-link" href="https://github.com/fernzaaron" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 .5a12 12 0 00-3.8 23.4c.6.1.8-.2.8-.5v-2c-3.3.7-4-1.6-4-1.6-.6-1.5-1.5-1.9-1.5-1.9-1.2-.8.1-.8.1-.8 1.3.1 2 1.4 2 1.4 1.2 2 3.2 1.4 4 .9.1-.7.5-1.4.9-1.7-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.3-3.1-.1-.3-.6-1.4.1-2.9 0 0 1-.3 3.4 1.2a11.7 11.7 0 016.2 0c2.4-1.5 3.4-1.2 3.4-1.2.7 1.5.2 2.6.1 2.9.8.8 1.3 1.8 1.3 3.1 0 4.5-2.7 5.4-5.3 5.7.5.4.9 1.1.9 2.2v3.3c0 .3.2.6.8.5A12 12 0 0012 .5z"/></svg>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="content">
+    <header class="hero">
+      <!-- animated background elements -->
+      <div class="bg-anim" aria-hidden="true">
+        <span class="blob b1"></span>
+        <span class="blob b2"></span>
+        <span class="blob b3"></span>
+        <span class="blob b4"></span>
+      </div>
+      <div class="container hero-inner centered-hero">
+        <div class="hero-left reveal-on-scroll" data-direction="left">
+          <div class="hero-content">
+            <h1>Aaron Fernandez</h1>
+            <p class="muted">Aspiring Cybersecurity & Software Engineering enthusiast · Node.js, MongoDB</p>
+            <p class="muted">Transitioning into cybersecurity — building reliable, secure backends and scalable systems. Passionate about application hardening, threat analysis, and practical defensive techniques.</p>
+            <p style="margin-top:1rem"><a class="cta" href="/projects">View Projects</a></p>
+          </div>
+        </div>
+
+        <div class="hero-right reveal-on-scroll" data-direction="right">
+          <img src="/portfolioimg.jpeg" alt="Aaron Fernandez" class="hero-img" data-parallax="0.28" />
+        </div>
+      </div>
+    </header>
+
+  <main>
+    <section id="education" class="section reveal-on-scroll">
+      <div class="container">
+        <h2>Education</h2>
+        <div style="margin-top:.6rem">
+          <div class="exp-item">
+            <img src="/ontariotechuniversity_primary_colour_rgb_150ppi.png" alt="Ontario Tech University logo" class="org-logo" />
+            <div class="exp-meta">
+              <strong>Ontario Tech University</strong> — Bachelor of Information Technology, Technology Management • 3.7 GPA
+              <div class="muted" style="margin-top:.4rem">Relevant coursework: Business Analysis, Python Programming, Object-Oriented Programming, Computer Architecture, Discrete Mathematics. Expected 2028 (Undergraduate)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section reveal-on-scroll">
+      <div class="container">
+        <h2>Work & Volunteer Experience</h2>
+        <ul class="timeline" style="margin-top:.8rem">
+          <li class="reveal-on-scroll">
+            <div class="exp-item">
+              <img src="/ontario_ministry_public_and_business_service_delivery_and_procurement_logo.jpg" alt="Ontario Public Service logo" class="org-logo" />
+              <div class="exp-meta">
+                <strong>Ontario Public Service (MRSPRD) — IT Systems Intern</strong> <span class="muted">• Toronto, ON — May 2025 – August 2025</span>
+                <div class="muted">Contributed to internal systems work and supported IT workflows during an internship placement.</div>
+              </div>
+            </div>
+          </li>
+
+          <li class="reveal-on-scroll">
+            <div class="exp-item">
+              <img src="/356081941_989599072238658_6059570925082673007_n.jpg" alt="VAC Detailing" class="org-logo" />
+              <div class="exp-meta">
+                <strong>VAC Detailing — Small Business Owner</strong> <span class="muted">• Vaughan, ON — June 2023 – September 2023</span>
+                <ul>
+                  <li>Created and managed a car-detailing micro-business, built a Setmore booking site, and handled customer bookings.</li>
+                  <li>Led social media marketing and created promotional content and ads using Canva.</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li class="reveal-on-scroll">
+            <div class="exp-item">
+              <img src="/channels4_profile.jpg" alt="City of Vaughan logo" class="org-logo" />
+              <div class="exp-meta">
+                <strong>City of Vaughan — Digital Marketing Volunteer (Grade 10)</strong> <span class="muted">• Oct 2022 – March 2023</span>
+                <ul>
+                  <li>Designed visual assets and supported social media communications for community events.</li>
+                  <li>Strengthened online presence through consistent scheduling and outreach.</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="certifications" class="section reveal-on-scroll">
+      <div class="container">
+        <h2>Certifications & Computer Skills</h2>
+        <div style="margin-top:.6rem">
+          <strong>Certifications</strong>
+          <ul class="skill-list" style="margin-top:.4rem">
+            <li><img class="skill-icon" src="/DATAQUEST.png" alt="Dataquest" />Dataquest.io — Python programming for Data Science (Issued June 2024)</li>
+            <li><img class="skill-icon" src="/SIMPLILEARN.png" alt="Simplilearn" />Simplilearn — Machine Learning Using Python (Issued Nov 2024)</li>
+          </ul>
+
+          <strong style="display:block;margin-top:.6rem">Computer Skills</strong>
+          <ul class="skill-list" style="margin-top:.4rem">
+            <li><img class="skill-icon skill-icon--xl" src="/msoffice.png" alt="MS Office" />MS Office: Excel (pivot tables, functions), PowerPoint, Word</li>
+            <li><img class="skill-icon skill-icon--large" src="/PYTHON.png" alt="Python" />Python: data scripting, problem solving, libraries for analysis</li>
+            <li style="flex-direction:column;align-items:flex-start;">
+              <div>Web: Node.js, Express, JavaScript</div>
+              <div class="skill-icons-row">
+                <img class="skill-icon skill-icon--xl" src="/NODE.png" alt="Node.js" />
+                <img class="skill-icon skill-icon--xl" src="/EXPRESS.png" alt="Express" />
+                <img class="skill-icon skill-icon--large" src="/JS.png" alt="JavaScript" />
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section reveal-on-scroll">
+      <div class="container">
+        <h2>Selected Projects</h2>
+        <div class="projects-grid" style="margin-top:1rem">
+          <div class="project-card reveal-on-scroll">
+            <h3>Task Management Web Service</h3>
+            <p class="muted">Node.js & Express API with MongoDB — full CRUD for tasks, RESTful routes, and persistent storage. Built as a coursework project demonstrating server-side routing, database integration, and API design.</p>
+            <div class="actions" style="margin-top:.6rem">
+              <a href="https://github.com/fernzaaron/A3-WS" target="_blank" rel="noopener">View Code</a>
+              <a href="https://a3-ws-2.onrender.com" target="_blank" rel="noopener" style="margin-left:.6rem">Live</a>
+            </div>
+          </div>
+          <div class="project-card reveal-on-scroll">
+            <h3>Portfolio (This site)</h3>
+            <p class="muted">Node/Express serving a minimalist, fast resume site.</p>
+            <div class="actions" style="margin-top:.6rem">
+              <a href="https://github.com/fernzaaron/Port-Web-Personal" target="_blank">Code</a>
+            </div>
+          </div>
+        </div>
+        <p style="margin-top:1rem"><a class="cta" href="/projects">View All Projects</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="col">
+        <strong>AF</strong>
+      </div>
+      <div class="col">
+        <a class="icon-link" href="/" aria-label="Home">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 11.5L12 4l9 7.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 21V12h14v9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="icon-link" href="/projects" aria-label="Projects">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 7h6l2 2h10v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="col" style="display:flex;gap:.6rem;align-items:center;justify-content:flex-end">
+        <a class="icon-link" href="https://github.com/fernzaaron" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 .5a12 12 0 00-3.8 23.4c.6.1.8-.2.8-.5v-2c-3.3.7-4-1.6-4-1.6-.6-1.5-1.5-1.9-1.5-1.9-1.2-.8.1-.8.1-.8 1.3.1 2 1.4 2 1.4 1.2 2 3.2 1.4 4 .9.1-.7.5-1.4.9-1.7-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.3-3.1-.1-.3-.6-1.4.1-2.9 0 0 1-.3 3.4 1.2a11.7 11.7 0 016.2 0c2.4-1.5 3.4-1.2 3.4-1.2.7 1.5.2 2.6.1 2.9.8.8 1.3 1.8 1.3 3.1 0 4.5-2.7 5.4-5.3 5.7.5.4.9 1.1.9 2.2v3.3c0 .3.2.6.8.5A12 12 0 0012 .5z"/></svg>
+        </a>
+            <a class="icon-link" href="https://www.linkedin.com/in/aaronfernandez547/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4.98 3.5a2.4 2.4 0 11.02 0zM3 8.98h4v12H3zM8.98 8.98h3.84v1.67h.05c.54-1 1.86-2.05 3.83-2.05 4.1 0 4.85 2.7 4.85 6.2v7.18h-4v-6.36c0-1.52 0-3.47-2.12-3.47-2.12 0-2.44 1.65-2.44 3.36v6.47h-4z"/></svg>
+        </a>
+        <div style="display:flex;flex-direction:column;align-items:flex-end;margin-left:.4rem">
+          <a href="mailto:aaron.fernandez@ontariotechu.net" style="color:var(--muted);text-decoration:none">aaron.fernandez@ontariotechu.net</a>
+          <a href="tel:+16478388803" style="color:var(--muted);text-decoration:none;margin-top:.25rem">647-838-8803</a>
+        </div>
+        <p style="margin-top:.6rem"><a href="#top" class="back-to-top">Back to top ↑</a></p>
+      </div>
+    </div>
+    <div class="footer-bar muted">© 2025 Aaron Fernandez — Built with Node.js & Express</div>
+  </footer>
+  <!-- Chatbot widget -->
+  <div class="chat-widget" aria-hidden="false">
+    <button class="chat-toggle" aria-label="Open assistant">💬</button>
+    <div class="chat-panel" aria-hidden="true">
+      <div class="chat-header">Site Assistant</div>
+      <div class="chat-messages" role="log" aria-live="polite"></div>
+      <form class="chat-form" onsubmit="return false;">
+        <input class="chat-input" placeholder="Ask me (e.g. 'Go to Projects')" autocomplete="off" />
+        <button class="chat-send" type="button">Send</button>
+      </form>
+    </div>
+  </div>
+  <script src="/script.js"></script>
+</body>
+</html>
