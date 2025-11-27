@@ -1,0 +1,12 @@
+{
+  "name": "Port-Web-Personal",
+  "owner": "fernzaaron",
+  "project_type": "static",
+  "install": "npm ci",
+  "build": "npm run build",
+  "start": "node server.js",
+  "output": "dist",
+  "env": {
+    "PORT": "8080"
+  }
+}
