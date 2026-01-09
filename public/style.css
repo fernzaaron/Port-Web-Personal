@@ -125,8 +125,10 @@ body::after{
 .links a:hover{ color:var(--accent) }
 
 @media (max-width:900px){
+  .top-nav .nav-inner{ padding:.75rem 1rem }
   .links{ display:none }
-  .links.open{ display:flex; position:absolute; right:12px; top:56px; background:rgba(8,12,22,0.96); padding:.8rem; border-radius:10px; flex-direction:column }
+  .links.open{ display:flex; position:absolute; right:12px; top:56px; background:rgba(8,12,22,0.98); padding:1rem; border-radius:10px; flex-direction:column; box-shadow:0 10px 40px rgba(0,0,0,0.6); z-index:100; min-width:180px }
+  .links a{ padding:.6rem .8rem; width:100%; text-align:left }
   .nav-toggle{ display:block }
 }
 
@@ -139,7 +141,7 @@ body::after{
 .centered-hero .hero-left{ text-align:left }
 .hero-visual{ width:360px; height:240px; border-radius:14px; background:linear-gradient(135deg,var(--accent),var(--accent2)); box-shadow:0 28px 70px rgba(0,194,255,0.12); transform:translateY(0) }
 .hero-img{ width:420px; height:300px; object-fit:cover; border-radius:14px; box-shadow:0 40px 100px rgba(0,0,0,0.5); border:1px solid rgba(255,255,255,0.04); }
-.hero h1{ font-size:clamp(3rem,7vw,6.4rem); margin:0 0 .6rem; font-weight:700; line-height:1.02; letter-spacing:-1px }
+.hero h1{ font-size:clamp(2.5rem,7vw,6.4rem); margin:0 0 .6rem; font-weight:700; line-height:1.1; letter-spacing:-1px }
 .hero p{ font-size:1.075rem }
 .hero p{ color:var(--muted); margin:0 0 1rem }
 
@@ -212,8 +214,44 @@ body::after{
 .responsive-grid{ display:grid; grid-template-columns:1fr 360px; gap:2rem }
 
 @media (max-width: 980px){
-  .hero-inner{ flex-direction:column; align-items:flex-start }
+  .hero-inner{ flex-direction:column; align-items:flex-start; padding-top:5rem; gap:1.5rem }
+  .hero-right{ width:100%; max-width:100%; margin-top:1rem }
+  .hero-img{ width:100%; max-width:420px; height:auto; min-height:240px }
   .responsive-grid{ grid-template-columns:1fr }
+}
+
+@media (max-width: 768px){
+  .container{ padding:0 1rem }
+  .hero{ min-height:auto; padding:1rem 0 2rem }
+  .hero-inner{ padding-top:4.5rem; gap:1.5rem }
+  .hero h1{ font-size:clamp(2rem,10vw,3.5rem); line-height:1.15; margin-bottom:.5rem }
+  .hero p{ font-size:1rem; line-height:1.6 }
+  .hero-img{ width:100%; height:auto; max-height:280px }
+  .section{ padding:1.5rem 0 }
+  .section h2{ font-size:1.5rem; margin-bottom:1rem }
+  .projects-grid{ grid-template-columns:1fr; gap:1rem }
+  .project-card{ padding:1rem }
+  .cta{ padding:.7rem 1.1rem; font-size:.95rem }
+  .timeline{ margin-left:.4rem }
+  .timeline li{ padding:.45rem 0 .45rem .6rem }
+  .exp-item{ flex-direction:column; gap:.5rem }
+  .org-logo{ height:36px; margin-bottom:.5rem }
+  .skill-icon{ width:36px }
+  .skill-icon--large{ width:44px }
+  .skill-icon--xl{ width:60px }
+  .footer-grid{ grid-template-columns:1fr; text-align:center; gap:1rem }
+  .footer .col{ justify-content:center !important }
+  .footer .col > div{ flex-direction:column; align-items:center !important }
+}
+
+@media (max-width: 480px){
+  .hero h1{ font-size:clamp(1.75rem,9vw,2.5rem) }
+  .hero p{ font-size:.95rem }
+  .hero-inner{ padding-top:4rem }
+  .section h2{ font-size:1.35rem }
+  .project-card h3{ font-size:1.1rem }
+  .tags li{ font-size:.85rem; padding:.35rem .6rem }
+  .cta{ padding:.65rem 1rem; font-size:.9rem }
 }
 
 @media (max-width:800px){
@@ -273,8 +311,14 @@ body::after{
 /* On small screens collapse sidebar into top bar */
 @media (max-width: 900px){
   .sidebar{ position:relative; width:100%; height:auto; flex-direction:row; justify-content:space-between; padding:0.8rem 1rem }
-  .side-links{ flex-direction:row }
-  .content{ margin-left:0 }
+  .side-links{ flex-direction:row; flex-wrap:wrap; justify-content:center }
+  .content{ margin-left:0; padding-top:0 }
+}
+
+@media (max-width: 768px){
+  .sidebar{ padding:.6rem .8rem }
+  .sidebar .brand{ font-size:.95rem }
+  .side-links a{ padding:.3rem .5rem; font-size:.9rem }
 }
 
 /* Respect user preference for reduced motion */
@@ -322,8 +366,13 @@ a:focus{ outline: 3px solid rgba(77,163,255,0.12); outline-offset:3px }
 .chat-send{ background:var(--accent); color:#04121a; border:0; padding:.55rem .8rem; border-radius:8px; cursor:pointer; font-weight:700 }
 
 @media (max-width:700px){
-  .chat-panel{ width:94vw; right:3%; left:3%; }
+  .chat-panel{ width:calc(100vw - 24px); max-width:none; right:auto; left:12px; bottom:72px }
   .chat-widget{ right:12px; bottom:12px }
+  .chat-toggle{ width:52px; height:52px; font-size:20px }
+  .chat-messages{ max-height:280px; padding:.8rem }
+  .chat-form{ padding:.7rem }
+  .chat-input{ font-size:.95rem; padding:.55rem .6rem }
+  .chat-send{ padding:.5rem .7rem; font-size:.9rem }
 }
 
 /* Scroll reveal */
